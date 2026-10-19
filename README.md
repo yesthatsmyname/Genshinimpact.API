@@ -1,0 +1,1 @@
+# Genshinimpact.API
