@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#171a2b">
+<title>Teyvat Archive — Genshin Impact Wiki</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="topbar"><div class="shell nav">
+  <div class="brand"><div class="logo">✧</div><span>TEYVAT ARCHIVE</span></div>
+  <nav class="navlinks" aria-label="Main navigation">
+    <button class="active" data-type="characters">Characters</button><button data-type="weapons">Weapons</button><button data-type="artifacts">Artifacts</button><button data-type="elements">Elements</button><button data-type="nations">Nations</button>
+  </nav>
+  <div class="api-status"><span class="dot" id="statusDot"></span><span id="statusText">Connecting to API…</span></div>
+</div></header>
+<main class="shell">
+  <section class="hero">
+    <div><div class="eyebrow">An adventurer's field guide</div><h1>Explore the world<br>of <span>Teyvat.</span></h1><p>Your fan-made reference archive for Genshin Impact. Browse characters, discover equipment, and look up the details behind your favorite adventures.</p></div>
+    <div class="hero-art"><div class="sigil">✧</div><strong>Seven nations. Countless stories.<small>A living archive powered by community data.</small></strong></div>
+  </section>
+  <div class="sectionhead"><div><h2 id="sectionTitle">Character Archive</h2><p id="sectionDesc">Meet the people of Teyvat.</p></div><div class="count" id="countLabel">Loading entries…</div></div>
+  <div class="toolbar">
+    <div class="searchwrap"><span>⌕</span><input id="search" type="search" placeholder="Search the archive…" aria-label="Search entries"></div>
+    <select id="elementFilter" aria-label="Filter by element"><option value="">All elements</option><option>Anemo</option><option>Geo</option><option>Electro</option><option>Dendro</option><option>Hydro</option><option>Pyro</option><option>Cryo</option></select>
+    <select id="sort"><option value="az">Name: A–Z</option><option value="za">Name: Z–A</option></select>
+  </div>
+  <div class="grid" id="grid"><div class="loading">Gathering knowledge from the archive…</div></div>
+  <p class="notice">Fan-made reference project. Game data is provided by the community API and may be incomplete or change over time.</p>
+</main>
+<footer class="footer"><div class="shell">TEYVAT ARCHIVE · Unofficial fan project, not affiliated with HoYoverse. Data API: <a href="https://genshin.jmp.blue/" target="_blank" rel="noreferrer">genshin.jmp.blue</a>.</div></footer>
+<div class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle"><div class="dialog"><div class="dialogtop"><h2 id="modalTitle">Entry details</h2><button class="close" id="closeModal" aria-label="Close">×</button></div><div id="detailContent" class="detail"><div class="loadline">Loading details…</div></div></div></div>
+<script src="script.js" defer></script>
+</body>
+</html>
