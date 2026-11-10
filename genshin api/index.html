@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#171a2b">
+  <meta name="description" content="Search Genshin Impact characters and explore their details, talents, and constellations.">
+  <title>Character Archive | Teyvat</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="shell nav">
+      <span class="nav-label">CHARACTER ENCYCLOPEDIA</span>
+    </div>
+  </header>
+
+  <main class="shell">
+    <section class="intro" aria-labelledby="page-title">
+      <p class="eyebrow">THE WORLD OF GENSHIN IMPACT</p>
+      <h1 id="page-title">Meet the characters of Teyvat</h1>
+      <p class="intro-copy">Search the archive to discover each character's story, talents, and constellations.</p>
+      <label class="searchwrap" for="search">
+        <span aria-hidden="true">⌕</span>
+        <input id="search" type="search" placeholder="Search characters…" autocomplete="off">
+        <kbd>/</kbd>
+      </label>
+    </section>
+
+    <section class="results" aria-labelledby="results-title">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">THE ARCHIVE</p>
+          <h2 id="results-title">Characters <span id="result-count"></span></h2>
+        </div>
+      </div>
+      <p id="status" class="status" role="status" aria-live="polite">Loading characters…</p>
+      <div id="character-grid" class="character-grid"></div>
+    </section>
+  </main>
+
+  <dialog id="character-dialog" aria-labelledby="detail-name">
+    <article class="detail">
+      <button id="close-dialog" class="close-button" type="button" aria-label="Close character details">×</button>
+      <div class="detail-heading">
+        <div class="detail-image-wrap">
+          <img id="detail-image" alt="" hidden>
+          <span id="detail-image-fallback" class="image-fallback" aria-hidden="true">✦</span>
+        </div>
+        <div class="detail-title">
+          <p id="detail-subtitle" class="eyebrow"></p>
+          <h2 id="detail-name"></h2>
+          <p id="detail-description" class="detail-description"></p>
+        </div>
+      </div>
+      <dl id="detail-facts" class="facts"></dl>
+      <div id="detail-extra"></div>
+    </article>
+  </dialog>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
